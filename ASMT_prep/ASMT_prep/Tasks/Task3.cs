@@ -10,13 +10,13 @@ using System.Collections.Generic;
 /// </summary>
 namespace dev
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine();
-        }
-    }
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Console.WriteLine();
+    //    }
+    //}
 }
 
 

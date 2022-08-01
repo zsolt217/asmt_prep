@@ -3,50 +3,52 @@ using System.Text;
 using System.Text.Json;
 using System.Collections.Generic;
 using System.Collections;
+using System.Diagnostics.CodeAnalysis;
 
 /// <summary>
 /// make class Employee a proper dictionary key
 /// </summary>
-namespace dev
+namespace ASMT_prep
 {
     //dictionary key is that it is comparable and hashable
     //override Equals and GetHashCode
     //IEqualityComparer: This interface allows the implementation of customized equality comparison for collections.
-    class Employee1 : IEqualityComparer
+    public class Employee : IEquatable<Employee>
     {
         public string Name { get; set; }
         public decimal Salary { get; set; }
 
         public override bool Equals(object obj)
         {
-            if (obj is Employee1 empl)
+            if (obj is Employee empl)
             {
-                return empl.Name.Equals(Name) && empl.Salary.Equals(Salary);
+                this.Equals(empl);
             }
             return false;
         }
 
-        public new bool Equals(object x, object y)
+        //For distinct
+        public bool Equals(Employee other)
         {
-            if (x is Employee1 empleft && y is Employee2 empright)
-            {
-                return empleft.Equals(empright);
-            }
-            return false;
+            return other.Name.Equals(Name) && other.Salary.Equals(Salary);
         }
 
         public override int GetHashCode()
         {
             return HashCode.Combine(Name.GetHashCode(), Salary.GetHashCode());
         }
+    }
 
-        public int GetHashCode(object obj)
+    public class EmployeeComparer : IEqualityComparer<Employee>
+    {
+        public bool Equals(Employee x, Employee y)
         {
-            if (obj is Employee1 employee)
-            {
-                return employee.GetHashCode();
-            }
-            return 0;
+            return x.Equals(y);
+        }
+
+        public int GetHashCode([DisallowNull] Employee obj)
+        {
+            return obj.GetHashCode();
         }
     }
 
@@ -69,5 +71,3 @@ namespace dev
     //    }
     //}
 }
-
-
