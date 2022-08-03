@@ -21,6 +21,11 @@ namespace ASMT_prep
             //var distinctedEmps = emps.Distinct(new EmployeeComparer());
 
             //Console.WriteLine(distinctedEmps.Select(x => x.Name).Aggregate((x, y) => $"{x},{y}"));
+
+            //Task6
+            var numbers = new[] { new Data { Value = 3, Name = "First" }, new Data { Value = 7, Name = "Second" }, new Data { Value = 5, Name = "Third" } };
+            var second = numbers.GetSecondHighest(x => x.Value);
+            Console.WriteLine(second.Name);
         }
     }
 }

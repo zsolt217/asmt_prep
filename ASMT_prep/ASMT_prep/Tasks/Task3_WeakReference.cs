@@ -4,6 +4,7 @@ using System.Text;
 using System.Text.Json;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Runtime.Versioning;
 
 /// <summary>
 ///  Task3 - Implement an image cache using WeakReference; files should be loaded from the disk
@@ -12,6 +13,7 @@ using System.Drawing;
 
 namespace ASMT_prep
 {
+    [SupportedOSPlatform("windows")]
     public class PictureManager
     {
         List<WeakReference<Image>> pictures;
