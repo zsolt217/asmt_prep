@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
@@ -8,6 +8,7 @@ using System.Collections.Generic;
 /// <summary>
 ///  Task2 - Filter out duplicates from collection using LINQ Distinct()
 /// </summary>
+/// Előző taskban megvalósítva kétféleképpen
 namespace ASMT_prep
 {
     //class Employee2
@@ -27,7 +28,7 @@ namespace ASMT_prep
     //        var e5 = new Employee { Name = "Y", Salary = 20 };
 
     //        var emps = new[] { e1, e2, e3, e4, e5 };
-               //Distinct visszat�r�si �rt�k!!!
+               //Distinct visszatérési érték!!!
     //        emps.Distinct();
 
 
