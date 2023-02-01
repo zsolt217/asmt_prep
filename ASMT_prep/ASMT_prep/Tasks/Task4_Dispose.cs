@@ -15,8 +15,7 @@ namespace ASMT_prep
         //unmanaged class
         private StreamReader _reader;
         private bool disposedValue;
-        private string path;
-        private object
+        private string path;      
 
         public FileLoader(string path)
         {
