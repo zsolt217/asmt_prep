@@ -30,8 +30,5 @@ namespace Task5_Singleton
             _users = await resp.Content.ReadAsStringAsync();
             return _users;
         }
-    }
-
-       
-    }
+    }    
 }

@@ -35,7 +35,7 @@ public interface IGetActualDate
     DateTime DateTimeNow();
 }
 
-public interface GetActualDate:IGetActualDate
+public class GetActualDate : IGetActualDate
 {
-    DateTime DateTimeNow()=>DateTimeNow();
+    public DateTime DateTimeNow() => DateTime.Now;
 }
