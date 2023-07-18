@@ -33,7 +33,7 @@ namespace ASMT_prep
             return other.Name.Equals(Name) && other.Salary.Equals(Salary);
         }
 
-        public override int GetHashCode()
+        public override int GetHashCode()//Todo
         {
             return HashCode.Combine(Name.GetHashCode(), Salary.GetHashCode());
         }
